@@ -37,16 +37,19 @@ $(document).ready(function() {
 
     var yourPizza = Object.create(Pizza);
 
-    var inputSize = $('input#size');
-    var inputTopping = $('input#topping');
+console.log(yourPizza);
+
+    var inputSize = $('input[name=size]:checked', '#input').val()
+    var inputTopping = $('input[name=topping]:checked', '#input').val()
+
+console.log(inputSize);
+console.log(inputTopping);
 
     yourPizza.size = inputSize;
     yourPizza.toppings = inputTopping;
 
-    var cost = yourPizza.price();
-
-    $('#order').text(yourPizza.order)
-    $('#cost').text(cost)
+    $('#order').text(yourPizza.order());
+    $('#cost').text(yourPizza.price());
 
 
 

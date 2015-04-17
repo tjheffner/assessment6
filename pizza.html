@@ -9,12 +9,13 @@
 
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
+      <div class="text-center">
 
         <h2>Create a Pizza:</h2>
 
 
-        <p>Our pizzeria is currently undergoing tough times, so we only offer two options currently. <br>
+        <p>Excuse the reduced menu, our pizzeria is currently undergoing tough times. <br>
         Please support local businesses.</p>
 
         <form id="input">
@@ -26,12 +27,10 @@
           </div>
 
           <div class="form-group">
-            <label for="size">Size:</label>
-            <select name="size" id="size">
-              <option value="small">12 in.</option>
-              <option value="medium">14 in.</option>
-              <option value="large">16 in.</option>
-            </select>
+            <label for="size">Size:</label><br>
+              <input type="radio" name="size" value="small">12 in. <br>
+              <input type="radio" name="size" value="medium">14 in. <br>
+              <input type="radio" name="size" value="large">16 in.
           </div>
 
           <button type="submit" class="btn btn-info">Order</button>
@@ -39,9 +38,11 @@
 
         <div id="result">
           <h3>You ordered: <span id="order" class="text-info"></span></h3>
-          <h3>The cost of your order is: <span id="cost" class="text-info"></span></h3>
+          <h3>The cost of your order is: $<span id="cost" class="text-info"></span>*</h3>
+          <h5>*All prices include tax. Please tip your bartender.</h5>
         </div>
 
+      </div>
     </div>
   </body>
 </html>
