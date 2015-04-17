@@ -16,12 +16,25 @@
         <form id="input">
           <div class="form-group">
             <label for="size">Size:</label>
-            <input type="text" class="size" name="size" id="size" class="form-control">
+            <select>
+              <option value="small">12 in.</option>
+              <option value="medium">14 in.</option>
+              <option value="large">16 in.</option>
+            </select>
           </div>
 
           <div class="form-group">
-            <label for="topping">Cheese or Pepperoni?</label>
-            <input type="text" class="topping" name="topping" id="topping" class="form-control">
+            <label for="topping">Toppings?</label><br>
+            <!-- <input type="text" class="topping" name="topping" id="topping" class="form-control"> -->
+
+            <input type="radio" name="topping" value="cheese">Cheese <br>
+            <input type="radio" name="topping" value="pepperoni">Pepperoni <br>
+
+
+            <!-- <input type="checkbox" name="topping" value="sausage">Sausage <br>
+            <input type="checkbox" name="topping" value="pineapple">Pineapple <br>
+            <input type="checkbox" name="topping" value="peppers">Peppers <br> -->
+
           </div>
 
           <button type="submit" class="btn btn-info">Order</button>

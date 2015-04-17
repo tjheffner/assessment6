@@ -1,6 +1,18 @@
-var order = function() {
+var Pizza = {
+  size: "small",
+  toppings: "cheese",
+
+  order: function() {
+    return this.size + " with " + this.toppings;
+  }
+
 
 };
+
+
+// var order = function(Pizza) {
+//   return size + " " + toppings;
+// };
 
 
 //
