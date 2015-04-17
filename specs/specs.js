@@ -17,5 +17,11 @@ describe("Pizza", function () {
       expect(testPizza.order()).to.equal('large with cheese');
     });
 
+    it("will return 'small with pepperoni' for a small pizza w/ pepperoni", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.toppings = ["pepperoni"]
+      expect(testPizza.order()).to.equal('small with pepperoni');
+    });
+
   });
 });

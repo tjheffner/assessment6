@@ -1,11 +1,10 @@
 var Pizza = {
   size: "small",
-  toppings: "cheese",
+  toppings: ["cheese"],
 
   order: function() {
     return this.size + " with " + this.toppings;
   }
-
 
 };
 
