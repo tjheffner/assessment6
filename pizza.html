@@ -13,35 +13,33 @@
 
         <h2>Create a Pizza:</h2>
 
+
+        <p>Our pizzeria is currently undergoing tough times, so we only offer two options currently. <br>
+        Please support local businesses.</p>
+
         <form id="input">
           <div class="form-group">
+            <label for="topping">Cheese or Pepperoni?</label><br>
+
+            <input type="radio" name="topping" value="cheese">Cheese <br>
+            <input type="radio" name="topping" value="pepperoni">Pepperoni <br>
+          </div>
+
+          <div class="form-group">
             <label for="size">Size:</label>
-            <select>
+            <select name="size" id="size">
               <option value="small">12 in.</option>
               <option value="medium">14 in.</option>
               <option value="large">16 in.</option>
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="topping">Toppings?</label><br>
-            <!-- <input type="text" class="topping" name="topping" id="topping" class="form-control"> -->
-
-            <input type="radio" name="topping" value="cheese">Cheese <br>
-            <input type="radio" name="topping" value="pepperoni">Pepperoni <br>
-
-
-            <!-- <input type="checkbox" name="topping" value="sausage">Sausage <br>
-            <input type="checkbox" name="topping" value="pineapple">Pineapple <br>
-            <input type="checkbox" name="topping" value="peppers">Peppers <br> -->
-
-          </div>
-
           <button type="submit" class="btn btn-info">Order</button>
         </form>
 
         <div id="result">
-          <h3>The cost of your pizza is: <span id="cost" class="text-info"></span></h3>
+          <h3>You ordered: <span id="order" class="text-info"></span></h3>
+          <h3>The cost of your order is: <span id="cost" class="text-info"></span></h3>
         </div>
 
     </div>
