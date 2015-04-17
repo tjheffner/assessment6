@@ -30,5 +30,19 @@ describe("Pizza", function () {
       expect(testPizza.price()).to.equal(10);
     });
 
+    it("will return 12 for a medium cheese pizza", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = "medium"
+      expect(testPizza.price()).to.equal(12);
+    });
+
+    it("will return 14 for a large pepperoni pizza", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = "large";
+      testPizza.toppings = "pepperoni";
+      expect(testPizza.price()).to.equal(14);
+    });
+
+
   });
 });
