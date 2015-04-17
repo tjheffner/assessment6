@@ -11,10 +11,11 @@ var Pizza = {
       var sizeCost;
 
     if (this.toppings === "cheese") {
-      var topCost = 0
-    } else {
-      var topCost = 1
-  }
+        var topCost = 0
+      } else {
+        var topCost = 1
+    }
+
     if (this.size === "small") {
       var sizeCost = 0
     }
@@ -27,9 +28,7 @@ var Pizza = {
 
     return 10 + topCost + sizeCost;
   }
-
 };
-
 
 $(document).ready(function() {
 
@@ -37,21 +36,14 @@ $(document).ready(function() {
 
     var yourPizza = Object.create(Pizza);
 
-console.log(yourPizza);
-
     var inputSize = $('input[name=size]:checked', '#input').val()
     var inputTopping = $('input[name=topping]:checked', '#input').val()
-
-console.log(inputSize);
-console.log(inputTopping);
 
     yourPizza.size = inputSize;
     yourPizza.toppings = inputTopping;
 
     $('#order').text(yourPizza.order());
     $('#cost').text(yourPizza.price());
-
-
 
   $('#result').show();
   event.preventDefault();
